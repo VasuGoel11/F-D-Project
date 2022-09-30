@@ -1,0 +1,412 @@
+﻿<!Doctype html>
+<html>
+
+<head>
+
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	
+	
+	<style>
+		body{
+		     background-size:cover;
+			 background-color: #bbccde;
+		    }
+
+		#a1{text-align:center}
+		#a1{font-size:50px;font-style:oblique}
+		
+		#footer{
+			text-align: center;
+			padding: 100px;
+			background-color: black;
+			
+		}
+		a{
+			color: pink;
+		}
+		#footer p{
+			color: pink;
+		}
+		.navbar-text{
+			position: absolute;
+			left: 95%;
+			bottom: 0.5px;
+		}
+		/* table {
+			text-align: center;
+		} */
+		.item{
+			display: grid;
+  			grid-template-columns: 180px 170px;
+		  grid-gap: 10px;
+		  background-color: #bccdde;
+		  margin-bottom: 10px;
+		}
+		.item-img{
+			width: 177px;
+		}
+		.item-div{
+			width: 177px;
+		}
+	</style>
+	
+	
+</head>
+<body>
+	<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#">KaKuLaVa's pizzas</a>
+		  <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">	
+				  <span class="navbar-text">
+				  <button class="btn btn-danger sticky-top" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa fa-shopping-cart"></i></button>
+				</span>
+				  <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+					<div class="offcanvas-header">
+					  <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Your Cart</h5>
+					  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
+					<div class="offcanvas-body">
+						<p class="badge bg-secondary pp">Total Price: ₹0</p>
+						<div class="cart">
+                                                
+
+						</div>
+                                             <button onclick="myFunction()">Continue</button>	
+	                                
+					</div>
+				</div>		  
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+	  <br>
+	  <br>
+	<div class="container-fluid">
+		
+		<div class="row">
+		  <div class="col-sm-1">
+		  </div>
+		  <div class="col-sm-10">
+			<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-indicators">
+				  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				</div>
+				<div class="carousel-inner">
+				  <div class="carousel-item active" data-bs-interval="3000">
+					<div align="center">
+					<video autoplay muted>
+						<source src="KaKuLaVa.mp4" width="1024" height="552" type="video/mp4">
+					 </video>
+					</div>
+				  </div>
+				  <div class="carousel-item">
+					<img class="h-90 w-100" src="https://api.dominos.co.in/prod-olo-api/images/Home_Amazon20200601.jpg" class="d-block w-100" alt="...">
+				  </div>
+				  <div class="carousel-item">
+					<img class="h-90 w-100" src="https://api.dominos.co.in/prod-olo-api/images/Home_Paytm_2020601.jpg" class="d-block w-100" alt="...">
+				  </div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Next</span>
+				</button>
+			  </div>
+		  </div>
+		  <div class="col-sm-1">
+		  </div>
+		</div>
+	  </div>
+	<div class="container">
+	<fieldset>
+	<legend ><h1>Veg pizzas</h1></legend>
+	<table >
+		<tr>
+			<td colspan="3"><img src='cheese5.jpeg' alt="image" height=150px width=400px id="img1"></td>
+			<td colspan="3"><img src='freshveggie.jpeg' alt="image" height=150px width=400px id="img2"></td>
+			<td colspan="3"><img src='IndianTandooriPaneer.jpeg' alt="image" height=150px width=400px id="img3"></td>
+		</tr>
+
+		<tr>
+		<td colspan="3"><b>Cheese and corn<br>Filled with cheese and corn</b></td>
+		<td colspan="3"><b>Fresh Veggie<br>Delectable combination of onion and capsium</b></td>
+		<td colspan="3"><b>Indi Tandoori Pizza<br>Hot and Spicy,Tandoori panner with capsium,red paprika and mint mayo</b></td>
+		
+		</tr>
+		
+		<tr>
+		<td><b>Size</b></td>
+		<td><b>Crust</b></td>
+		<td>Price ₹<span id="price1">69</span></td>
+		<td><b>Size</b></td>
+		<td><b>Crust</b></td>
+		<td>Price ₹<span id="price2">79</span></td>
+		<td><b>Size</b></td>
+		<td><b>Crust</b></td>
+		<td>Price ₹<span id="price3">99</span></td>
+		</tr>
+	
+		<tr>
+		<td><select name="CheeseAndCorn" id="size1" class="selectsize">
+			<option value='small'>small</option>
+			<option value='medium'>medium+₹20</option>
+			<option value="large">large+₹30</option>
+		</td>
+		<td><select name="FreshVeggies" id="crust1" class="selectcrust">
+			<option>thin crust</option>
+			<option>cheese burst +₹20</option>
+			<option>new hand tossed +₹30</option>
+		</td>
+		<td><button class="b btn btn-danger" id="b1">Add to Cart</button></td>
+		<td><select name="IndiTandooriPizza" id="size2" class="selectsize">
+			<option value='small'>small</option>
+			<option value='medium'>medium+₹20</option>
+			<option value='large'>large+₹30</option>
+		</td>
+		<td><select id="crust2" class="selectcrust">
+			<option>thin crust</option>
+			<option>cheese burst +₹20</option>
+			<option>new hand tossed +₹30</option>
+		</td>
+		<td><button class="b btn btn-danger" id="b2">Add to Cart</button></td>
+		<td><select name="AchariDoPyaza" id="size3" class="selectsize">
+			<option value='small'>small</option>
+			<option value='medium'>medium+₹20</option>
+			<option value='large'>large+₹30</option>
+		</td>
+		<td><select id="crust3" class="selectcrust">
+			<option>thin crust</option>
+			<option>cheese burst +₹20</option>
+			<option>new hand tossed +₹20</option>
+		</td>
+		<td><button class="b btn btn-danger" id="b3">Add to Cart</button></td>
+
+		<tr>
+			<td colspan="3"><img src='achari_do_pyaza.jpeg' alt="image" height=150px width=400px id="img4"></td>
+			<td colspan="3"><img src='kadai panner.jpeg' alt="image" height=150px width=400px id="img5"></td>
+			<td colspan="3"><img src='Creamy Tomato Pasta.jpeg' alt="image" height=150px width=400px id="img6"></td>
+		</tr>
+
+		<tr>
+		<td colspan="3"><b>Achari Do Pyaza<br>Tangy and achari flavours on a cheesy onion pizza</b></td>
+		<td colspan="3"><b>Kadhai Panner<br>Panner chunks in your spicy kadhai masala flavours with onion and capsicum</b></td>
+		<td colspan="3"><b>Creamy Tomato Pasta<br>Loaded with creamy tomato pasta topping,capsicum,yellow and red bell peppers with black olives</b></td>
+		</tr>
+		<tr>
+		<td><b>Size</b></td>
+		<td><b>Crust</b></td>
+		<td>Price ₹<span id="price4">97</span></td>
+		<td><b>Size</b></td>
+		<td><b>Crust</b></td>
+		<td>Price ₹<span id="price5">119</span></td>
+		<td><b>Size</b></td>
+		<td><b>Crust</b></td>
+		<td>Price ₹<span id="price6">89</span></td>
+		</tr>
+
+		<tr>
+		
+		<td><select id="size4" class="selectsize">
+			<option>small</option>
+			<option>medium+₹20</option>
+			<option>large+₹30</option>
+		</td>
+		<td><select id="crust4" class="selectcrust">
+			<option>thin crust</option>
+			<option>cheese burst +₹20</option>
+			<option>new hand tossed +₹30</option>
+		</td>
+		<td><button class="b btn btn-danger" id="b4">Add to Cart</button></td>
+		
+		<td><select id="size5" class="selectsize">
+			<option>small</option>
+			<option>medium+₹20</option>
+			<option>large+₹30</option>
+		</td>
+		<td><select id="crust5" class="selectcrust">
+			<option>thin crust</option>
+			<option>cheese burst +₹20</option>
+			<option>new hand tossed +₹30</option>
+		</td>
+		<td><button class="b btn btn-danger" id="b5">Add to Cart</button></td>
+		
+		<td><select id="size6" class="selectsize">
+			<option>small</option>
+			<option>medium+₹20</option>
+			<option>large+₹30</option>
+		</td>
+		<td><select id="crust6" class="selectcrust">
+			<option>thin crust</option>
+			<option>cheese burst +₹20</option>
+			<option>new hand tossed +₹30</option>
+		</td>
+		<td><button class="b btn btn-danger" id="b6">Add to Cart</button></td>
+		
+		</tr>
+
+	</table>
+	</fieldset>
+
+	<fieldset>
+		<legend ><h1>Non-Veg pizzas</h1></legend>
+		<table >
+			<tr>
+				<td colspan="3"><img src='new_chicken_onion_barbeque.jpeg' alt="image" height=150px width=400px id="img1"></td>
+				<td colspan="3"><img src='new_chicken_sausage.jpeg' alt="image" height=150px width=400px id="img2"></td>
+				<td colspan="3"><img src='Creamy Tomato Pasta non veg.jpeg' alt="image" height=150px width=400px id="img3"></td>
+			</tr>
+	
+			<tr>
+			<td colspan="3"><b>Pepper Barbeque<br>Pepper Barbeque for extra zing</b></td>
+			<td colspan="3"><b>Chicken Sausage<br>Spicy!, herbed chicken sausage</b></td>
+			<td colspan="3"><b>Creamy Tomato Pasta Pizza<br>Loaded with creamy tomato pasta topping,BBQ chicken,capsicum,yellow and red bell peppers with black olives</b></td>
+			
+			</tr>
+			
+			<tr>
+			<td><b>Size</b></td>
+			<td><b>Crust</b></td>
+			<td>Price ₹<span id="price7">79</span></td>
+			<td><b>Size</b></td>
+			<td><b>Crust</b></td>
+			<td>Price ₹<span id="price8">89</span></td>
+			<td><b>Size</b></td>
+			<td><b>Crust</b></td>
+			<td>Price ₹<span id="price9">109</span></td>
+			</tr>
+		
+			<tr>
+			<td><select id="size7" class="selectsize">
+				<option value='small'>small</option>
+				<option value='medium'>medium+₹20</option>
+				<option value="large">large+₹30</option>
+			</td>
+			<td><select id="crust7" class="selectcrust">
+				<option>thin crust</option>
+				<option>cheese burst +₹20</option>
+				<option>new hand tossed +₹30</option>
+			</td>
+			<td><button class="b btn btn-danger" id="b7">Add to Cart</button></td>
+
+			<td><select name="IndiTandooriPizza" id="size8" class="selectsize">
+				<option value='small'>small</option>
+				<option value='medium'>medium+₹20</option>
+				<option value='large'>large+₹30</option>
+			</td>
+			<td><select id="crust8" class="selectcrust">
+				<option>thin crust</option>
+				<option>cheese burst +₹20</option>
+				<option>new hand tossed +₹30</option>
+			</td>
+			<td><button class="b btn btn-danger" id="b8">Add to Cart</button></td>
+
+			<td><select name="AchariDoPyaza" id="size9" class="selectsize">
+				<option value='small'>small</option>
+				<option value='medium'>medium+₹20</option>
+				<option value='large'>large+₹30</option>
+			</td>
+			<td><select id="crust9" class="selectcrust">
+				<option>thin crust</option>
+				<option>cheese burst +₹20</option>
+				<option>new hand tossed +₹20</option>
+			</td>
+			<td><button class="b btn btn-danger" id="b9">Add to Cart</button></td>
+	
+			<tr>
+				<td colspan="3"><img src='new_chicken_golden_delight.jpeg' alt="image" height=150px width=400px id="img4"></td>
+				<td colspan="3"><img src='new_non_veg_supreme.jpeg' alt="image" height=150px width=400px id="img5"></td>
+				<td colspan="3"><img src='cheesepepperoni.jpeg' alt="image" height=150px width=400px id="img6"></td>
+			</tr>
+	
+			<tr>
+			<td colspan="3"><b>Chicken Golden Delight<br>Double pepper barbecue chicken,golden corn and extra cheese</b></td>
+			<td colspan="3"><b>Non Veg Supreme<br>Supreme combination of black olives,onion,capsicum,grilled mushroom,BBQ chicken and grilled chicken rashers</b></td>
+			<td colspan="3"><b>Chicken Pepperoni<br>Flavour of chicken pepperoni topped with extra cheese</b></td>
+			</tr>
+			<tr>
+			<td><b>Size</b></td>
+			<td><b>Crust</b></td>
+			<td>Price ₹<span id="price10">107</span></td>
+			<td><b>Size</b></td>
+			<td><b>Crust</b></td>
+			<td>Price ₹<span id="price11">129</span></td>
+			<td><b>Size</b></td>
+			<td><b>Crust</b></td>
+			<td>Price ₹<span id="price12">99</span></td>
+			</tr>
+	
+			<tr>
+			
+			<td><select id="size10" class="selectsize">
+				<option>small</option>
+				<option>medium+₹20</option>
+				<option>large+₹30</option>
+			</td>
+			<td><select id="crust10" class="selectcrust">
+				<option>thin crust</option>
+				<option>cheese burst +₹20</option>
+				<option>new hand tossed +₹30</option>
+			</td>
+			<td><button class="b btn btn-danger" id="b10">Add to Cart</button></td>
+			
+			<td><select id="size11" class="selectsize">
+				<option>small</option>
+				<option>medium+₹20</option>
+				<option>large+₹30</option>
+			</td>
+			<td><select id="crust11" class="selectcrust">
+				<option>thin crust</option>
+				<option>cheese burst +₹20</option>
+				<option>new hand tossed +₹30</option>
+			</td>
+			<td><button class="b btn btn-danger" id="b11">Add to Cart</button></td>
+			
+			<td><select id="size12" class="selectsize">
+				<option>small</option>
+				<option>medium+₹20</option>
+				<option>large+₹30</option>
+			</td>
+			<td><select id="crust12" class="selectcrust">
+				<option>thin crust</option>
+				<option>cheese burst +₹20</option>
+				<option>new hand tossed +₹30</option>
+			</td>
+			<td><button class="b btn btn-danger" id="b12">Add to Cart</button></td>
+			
+			</tr>
+	
+		</table>
+		</fieldset>
+	<br><br>
+</div>
+	
+
+	<footer id="footer">
+		<a href=""><i class="fa fa-twitter i-foot" aria-hidden="true"></i></a>
+		<a href=""><i class="fa fa-facebook i-foot" aria-hidden="true"></i></a>
+		<a href=""><i class="fa fa-instagram i-foot" aria-hidden="true"></i></a>
+		<a href=""><i class="fa fa-envelope i-foot" aria-hidden="true"></i></a>
+	
+		<p>© Copyright 2021 KaKuLaVa's Pvt. Ltd.</p>
+	
+	  </footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="project.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+ </body>
+</html>

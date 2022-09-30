@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+#email1{
+      color:white;
+      text-align:center;
+      font-family:Rockwell;
+       margin-top:50px;
+       font-size:16px;
+       margin-left:1%;
+    
+      
+}
+
+#pass{color:white;
+      text-align:center;
+      font-family:Rockwell;
+       margin-top:35px;
+       font-size:16px;
+       margin-right:5%;
+     
+}
+#pass1{color:white;
+      text-align:center;
+      font-family:Rockwell;
+       margin-top:35px;
+       font-size:16px;
+       margin-right:18%;
+}
+
+
+
+
+#frm{
+margin:auto;
+background-color: hsla(47, 100%, 46%,0.7);
+text-align:center;
+height:480px;
+width:500px;
+border-radius: 5px;
+margin-top:75px;
+color:white;
+text-align:center;
+font-family:Rockwell;
+border:2px solid white;
+
+}
+
+
+#btn{
+ background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+   width:30%;
+   border: 2px solid white;
+  cursor: pointer;
+  border-radius: 10px;
+ text-align: center;
+ margin-top:50px;
+  font-family:Rockwell;
+  font-size:15px;
+}
+
+#btn:hover {
+  background-color:  #358a38;
+  color: white;
+opacity: 0.9;
+text-decoration:underline;
+}
+
+body {margin:auto;
+    background-image: url('pizza4.jpg');
+    background-attachment: fixed;  
+    background-size: cover;
+  
+}
+#email1:hover
+{text-decoration:underline;
+cursor:pointer;  
+}
+#pass:hover
+{text-decoration:underline;
+cursor:pointer;  
+}
+#password{
+padding:5px;
+margin-right:auto;
+
+}
+#email{
+padding:5px;
+}
+#pass1:hover
+{text-decoration:underline;
+cursor:pointer;  
+}
+#number{
+padding:5px;
+margin-left:20px;
+margin-right:auto;
+}
+
+
+</style>
+
+</head>
+<body>
+<form id="frm">
+<div>
+    <h1>Sign Up<h1>
+    
+    <div id="email1">
+    <label for="email">Email</label>
+    <input type="text" id="email" required>
+    </div>
+
+     <div id="pass">
+    <label for="password">Password&nbsp</label>
+    <input type="password" id="password" required>
+    </div>
+
+     <div id="pass1">
+    <label for="password">Confirm Password</label>
+    <input type="password" id="password" required>
+    </div> 
+    
+     <div id="pass1">
+    <label for="number">Mobile Number</label>
+    <input type="number" id="number" required>
+    </div> 
+
+</div>
+    
+<div>
+<button id="btn" onclick="myFunction2()">Proceed</button>
+<button id="btn" onclick="myFunction()">Back</button>
+</div>
+</form>
+<script>
+
+function myFunction(){
+window.location="Mainpage.html";
+document.write('Please Wait...');
+setTimeout('myFunction()',1000);
+}
+
+
+ function myFunction2() {
+
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+                var number=document.getElementById("number").value;
+
+                console.log(email.length);
+                console.log(password.length);
+                console.log(number.length);
+
+                if (email.length > 7 && password.length > 7 && number.length >9) {
+                    document.write('Please Wait...');
+                    window.setTimeout(function () {
+                        window.location.href = "login.html";
+                    }, 1000);
+                } else {
+                    alert('Enter All Details!!');
+                }
+
+            }
+        </script>
+
+</script>
+
+</body>
+</html>
+

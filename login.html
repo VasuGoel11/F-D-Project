@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        #name {
+            color: white;
+            text-align: center;
+            font-family: Rockwell;
+            margin-top: 50px;
+            font-size: 16px;
+        }
+
+        #pass {
+            color: white;
+            text-align: center;
+            font-family: Rockwell;
+            margin-top: 35px;
+            font-size: 16px;
+        }
+
+
+        #frm {
+            background-color: hsla(47, 100%, 46%, 0.7);
+            margin: auto;
+            text-align: center;
+            height: 330px;
+            width: 493px;
+            border-radius: 4px;
+            margin-top: 120px;
+            color: white;
+            text-align: center;
+            font-family: Rockwell;
+            border: 2px solid white;
+        }
+
+
+        #btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            width: 30%;
+            border: 2px solid white;
+            cursor: pointer;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 35px;
+            font-family: Rockwell;
+            font-size: 15px;
+        }
+
+        #btn:hover {
+            background-color: #358a38;
+            color: white;
+            opacity: 0.9;
+            text-decoration: underline;
+        }
+
+        body {
+            margin: auto;
+            background-image: url('pizza4.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        #name:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        #pass:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        #password {
+            padding: 5px;
+        }
+
+        #username {
+            padding: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form id="frm">
+        <form id="frm1">
+            <div>
+                <h1>LOGIN<h1>
+
+                        <div id="name">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" required>
+                        </div>
+
+                        <div id="pass">
+                            <label for="password">Password&nbsp;</label>
+                            <input type="password" required id="password">
+                        </div>
+            </div>
+
+            <div>
+                <button type="submit" id="btn" onclick="myFunction2()">Proceed</button>
+                <button id="btn" onclick="myFunction()">Sign up</button>
+            </div>
+        </form>
+        <script>
+            function myFunction() {
+                window.location = "signup.html";
+                document.write('Please Wait...');
+                setTimeout('myFunction()', 1000);
+            }
+
+            //function myFunction2(){
+            //window.location="project.html";
+            //document.write('Please Wait...');
+            //setTimeout('myFunction2()',1000);
+            //}
+            function myFunction2() {
+
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+
+                console.log(username.length);
+                console.log(password.length);
+
+                if (username.length > 7 && password.length > 7) {
+                    document.write('Please Wait...');
+                    window.setTimeout(function () {
+                        window.location.href = "project.html";
+                    }, 1000);
+                } else {
+                    alert('enter username and password first (8 digits)!!');
+                }
+
+            }
+        </script>
+
+
+</body>
+
+</html>
