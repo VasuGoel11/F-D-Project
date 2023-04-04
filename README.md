@@ -1,2 +1,1 @@
-# F-D-Project
-Pizza Website
+# Pizza Website
